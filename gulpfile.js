@@ -7,21 +7,24 @@ var path = {
         js: 'assets/build/js/',
         css: 'assets/build/css/',
         img: 'assets/build/img/',
-        fonts: 'assets/build/fonts/'
+        fonts: 'assets/build/fonts/',
+        video: 'assets/build/video/'
     },
     src: {
         html: 'assets/src/*.html',
         js: 'assets/src/js/main.js',
         style: 'assets/src/style/main.scss',
         img: 'assets/src/img/**/*.*',
-        fonts: 'assets/src/fonts/**/*.*'
+        fonts: 'assets/src/fonts/**/*.*',
+        video: 'assets/src/video/**/*.*'
     },
     watch: {
         html: 'assets/src/**/*.html',
         js: 'assets/src/js/**/*.js',
         css: 'assets/src/style/**/*.scss',
         img: 'assets/src/img/**/*.*',
-        fonts: 'assets/srs/fonts/**/*.*'
+        fonts: 'assets/src/fonts/**/*.*',
+        video: 'assets/src/video/**/*.*'
     },
     clean: './assets/build/*'
 };
@@ -118,6 +121,14 @@ gulp.task('image:build', function () {
         .pipe(gulp.dest(path.build.img)); // выгрузка готовых файлов
 });
 
+// сбор video
+gulp.task('video:build', function () {
+    return gulp.src(path.src.video) // выбор всех video файлов по указанному пути
+        .pipe(plumber()) // отслеживание ошибок
+        .pipe(gulp.dest(path.build.video)) // выкладывание готовых файлов
+        .pipe(webserver.reload({ stream: true })); // перезагрузка сервера
+});
+
 // удаление каталога build 
 gulp.task('clean:build', function () {
     return gulp.src(path.clean, { read: false })
@@ -137,7 +148,8 @@ gulp.task('build',
             'css:build',
             'js:build',
             'fonts:build',
-            'image:build'
+            'image:build',
+            'video:build'
         )
     )
 );
@@ -149,6 +161,7 @@ gulp.task('watch', function () {
     gulp.watch(path.watch.js, gulp.series('js:build'));
     gulp.watch(path.watch.img, gulp.series('image:build'));
     gulp.watch(path.watch.fonts, gulp.series('fonts:build'));
+    gulp.watch(path.watch.video, gulp.series('video:build'));
 });
 
 // задача по умолчанию

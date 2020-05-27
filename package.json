@@ -1,17 +1,17 @@
 {
   "name": "bootstrap-4",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Start project with use Bootstrap 4",
-  "author": "itchief.ru",
+  "author": "Mat Vasilenko",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/itchief/gulp-project-bootstrap-4.git"
+    "url": "git://github.com/MatveiVasilenko/gulp-2020.git"
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gulp-uglify-es": "^2.0.0",
-    "jquery": "^3.4.1",
+    "jquery": "3.4.1",
     "popper.js": "^1.14.7",
     "slick-carousel": "^1.8.1"
   },
