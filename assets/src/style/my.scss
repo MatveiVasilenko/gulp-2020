@@ -1,0 +1,23 @@
+$font: 'Roboto', sans-serif;
+$colorMain: #fff;
+$colorFirst: #2378FC; //blue
+$colorSecond: #30BCC9; //green
+$colorThird: #FFC41E; //yellow
+$colorFourth: #F6404F; //red
+$colorFive: #FAF3E3; //Ice cream
+$colorFont: #2E373B; //text subcolor
+$fontSize: 16px;
+$fontLittle: 21px;
+$fontMiddle: 30px;
+$transition: 0.2s all linear;
+
+* {
+	box-sizing: border-box;
+}
+html {
+	overflow-x: hidden;
+}
+body {
+	font: $fontSize $font;
+	background: $colorFive;
+}
