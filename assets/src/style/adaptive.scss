@@ -1,0 +1,38 @@
+@media screen and (max-width: 768px) {
+	
+}
+@media screen and (max-width: 576px) {
+	.section {
+		&__first {
+			text-align: center;
+		}
+	}
+	.menu {
+		padding: 5px 10px;
+		&__social {
+			// width: 100%;
+			& a {
+				& i {
+					font-size: $fontMedium;
+					margin: 0 5px;
+				}
+
+			}
+		}
+		&__logo {
+			width: 120px;
+			// padding-bottom: 10px; 
+		}
+	}
+	.how {
+		&__item {
+			&__number {
+				&--center {
+					&:before, &:after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

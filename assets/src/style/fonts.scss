@@ -1,0 +1,32 @@
+@font-face {
+	// название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+	font-family: "Europa"; 
+	// адрес шрифта и тип 
+	src: url("../fonts/Europa.ttf") format("truetype"),
+		 url("../fonts/Europa.eot") format("eot"),
+		 url("../fonts/Europa.woff") format("woff"); 
+	font-style: normal; 
+	font-weight: 400; 
+}
+@font-face {
+	// название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+	font-family: "Europa"; 
+	// адрес шрифта и тип 
+	src: url("../fonts/europanuovabold.ttf") format("truetype"),
+		 url("../fonts/europanuovabold.eot") format("eot"),
+		 url("../fonts/europanuovabold.woff") format("woff"); 
+	font-style: normal; 
+	font-weight: 700; 
+}
+@font-face {
+	// название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+	font-family: "Europa"; 
+	// адрес шрифта и тип 
+	src: url("../fonts/europanuovaextrabold.ttf") format("truetype"),
+		 url("../fonts/europanuovaextrabold.eot") format("eot"),
+		 url("../fonts/europanuovaextrabold.woff") format("woff"); 
+	font-style: normal; 
+	font-weight: 900; 
+}
+
+
