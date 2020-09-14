@@ -1,10 +1,50 @@
 @media screen and (max-width: 768px) {
-	
+	.first {
+		padding-top: 50px;
+	}
+	.hiddens {
+		display: block;
+	}
+	.section {
+		&__about {
+			background-image: none;
+		}
+		&__quote {
+			background-image: none;
+		}
+	}
+	.how {
+		&__item {
+			padding: 0 15px;
+		}
+	}
 }
 @media screen and (max-width: 576px) {
 	.section {
+		
+	}
+	.first {
+		&__title {
+			font-size: $fontTitleMD;
+		}
+	}
+	.section {
+		padding: 10px 0;
 		&__first {
+			height: auto;
 			text-align: center;
+			&--general {
+				height: 100vh;
+			}
+		}
+		&__about {
+			padding-bottom: 0;
+		}
+		&__quote {
+			padding: 0;
+		}
+		&__course {
+			padding: 30px 0;
 		}
 	}
 	.menu {
@@ -21,11 +61,11 @@
 		}
 		&__logo {
 			width: 120px;
-			// padding-bottom: 10px; 
 		}
 	}
 	.how {
 		&__item {
+			margin-bottom: 20px;
 			&__number {
 				&--center {
 					&:before, &:after {
@@ -34,5 +74,56 @@
 				}
 			}
 		}
+	}
+	.quote {
+		&__body {
+			padding: 10px 0;
+			&:after {
+				height: 0px;
+				width: 80%;
+				bottom: -10%;
+				left: 10%;
+			}
+		}
+	}
+	.course {
+		&__quote {
+			position: static;
+			transform: rotateZ(0);
+			width: 100%;
+			text-align: center;
+			&__img {
+				margin: 0 auto;
+			}
+		}
+		&__program {
+			&__item {
+				align-items: flex-start;
+			}
+		}
+	}
+	.forms {
+		padding: 10px;
+		&__switch {
+			width: 100%;
+		}
+	}
+	.form {
+		&__desc {
+			text-align: center;
+			padding-bottom: 20px;
+			&__title {
+				font-size: $fontTitleMD;
+			}
+		}
+	}
+	.btns {
+		&--secondary {
+			width: max-content;
+		}
+	}
+	.quote {
+		flex-direction: column;
+		margin-top: 20px;
 	}
 }

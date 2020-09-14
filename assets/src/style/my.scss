@@ -4,15 +4,23 @@ $fontMedium: 20px;
 $fontLong: 26px;
 $fontSubTitle: 32px;
 $fontTitle: 52px;
+$fontTitleMD: 40px;
 $color: #414f9e;
 $colorLight: #fff;
+$colorDark: #000;
+$colorOrange: #ff6901;
+$colorBlue: #9698c8;
+$colorGreen: #337a3d;
+$colorPurple: #bb05fa;
+$colorLightBlue: #7060cd;
+$colorAqua: #016b9a;
 
 * {
 	box-sizing: border-box;
 }
 html {
 	overflow-x: hidden;
-	
+	scroll-behavior: smooth;
 }
 body {
 	font-family: $fontFamily;
@@ -25,6 +33,18 @@ a {
 		text-decoration: none;
 	}
 }
+button {
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+}
+input {
+	&:hover,
+	&:focus {
+		outline: none;
+	}
+}
 .section {
 	padding: 40px 0;
 	&__about {
@@ -32,6 +52,7 @@ a {
 		background-position: 100% center;
 		background-size: 50%;
 		padding: 50px 0;
+		background-image: url('../img/about1.png')
 	}
 	&__first {
 		background-repeat: no-repeat;
@@ -48,6 +69,10 @@ a {
 		background-position: 0% center;
 		background-size: 50%;
 		padding: 80px 0;
+		background-image: url('../img/learn.png')
+	}
+	&__course {
+		padding: 70px 0;
 	}
 }
 .btns {
@@ -72,6 +97,25 @@ a {
 		font-size: $fontMedium;
 		margin: 10px 0;
 	}
+	&--course {
+		display: block;
+		font-size: $fontMedium;
+		// margin: 15px 0;
+		margin-top: 40px;
+		margin-bottom: 15px;
+		width: 220px;
+		padding: 10px;
+	}
+	&--secondary {
+		padding: 5px 15px;
+		background: transparent;
+		font-size: $fontMedium;
+		font-weight: 700;
+		margin: 0 30px;
+	}
+	&--form {
+		padding: 10px 60px;
+	}
 	&:hover {
 		background: $colorLight;
 		color: $color;
@@ -88,20 +132,97 @@ a {
 		padding: 0 10px;
 		font-weight: 700;	
 	}
+	&__course {
+		font-size: $fontTitleMD;
+		position: relative;
+		font-weight: 700;
+		display: inline-block;
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			bottom: -5px;
+			left: 0;
+			background: $colorOrange;
+
+		}
+	}
 }
 .subtitle {
 	font-size: $fontMedium;
 }
 .color {
+	&--dark {
+		color: $colorDark !important;
+	}
 	&--light {
-		color: $colorLight;
+		color: $colorLight !important;
+	}
+	&--orange {
+		color: $colorOrange !important;
+	}
+	&--green {
+		color: $colorGreen !important;
+	}
+	&--purple {
+		color: $colorPurple !important;
+	}
+	&--lightblue {
+		color: $colorLightBlue !important;
+	}
+	&--aqua {
+		color: $colorAqua !important;
+	}
+}
+.bg {
+	&--orange {
+		background: $colorOrange !important;
+	}
+	&--blue {
+		background: $colorBlue !important; 
+	}
+	&--color {
+		background: $color !important;
+	}
+	&--green {
+		background: $colorGreen !important;
+	}
+	&--purple {
+		background: $colorPurple !important;
+	}
+	&--lightblue {
+		background: $colorLightBlue !important;
+	}
+	&--aqua {
+		background: $colorAqua !important;
 	}
 }
 .fw700 {
 	font-weight: 700;
 }
+.hiddens {
+	display: none;
+}
+.fontSize {
+	&--medium {
+		font-size: $fontMedium;
+	}
+	&--long {
+		font-size: $fontLong;
+	}
+	&--subtitle {
+		font-size: $fontSubTitle;
+	}
+	&--title {
+		font-size: $fontTitle;
+	}
+}
 //first 
 .first {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
 	&__title {
 		font-size: $fontTitle;
 		font-weight: 900;
@@ -109,6 +230,9 @@ a {
 		line-height: 1.1;
 		font-family: 'Europa', sans-serif;;
 		margin-top: 10%;
+		&--course {
+			font-weight: 900;
+		}
 	}
 	&__subtitle {
 		color: $colorLight;
@@ -134,7 +258,7 @@ a {
 	}
 	&__social {
 		order: 4;
-		@media screen and (max-width: 576px) {
+		@media screen and (max-width: 768px) {
 			order: 2;
 		}
 		& a {
@@ -146,15 +270,12 @@ a {
 		}
 	}
 }
-.collapse {
-	order: 3;
-	// @media screen and (max-width: 576px) {
-	// 	order: 4
-	// }
+.navbar-collapse {
+	order: 4;
 }
 .navbar-toggler {
 	order: 2;
-	@media screen and (max-width: 576px) {
+	@media screen and (max-width: 768px) {
 		order: 4
 	}
 	&:focus {
@@ -179,7 +300,7 @@ a {
 		clip-path: polygon(0 0, 97% 0, 100% 100%, 0% 100%);
 		background: $color;
 		font-size: $fontLong;
-		// font-weight: 700;
+		// font-weight: 700; 
 		color: $colorLight;
 		padding: 5px 10px;
 		width: 80%;
@@ -261,7 +382,7 @@ a {
 			width: 110%;
 			height: 15px;
 			background: $color;
-			bottom: -40%;
+			bottom: -45%;
 			left: -50px;
 		}
 	}

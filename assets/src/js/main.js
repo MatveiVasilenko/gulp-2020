@@ -24,4 +24,5 @@
 // Импортируем другие js-файлы
 
 //= slick.js
+//= jquery.maskedinput.js
 //= my.js

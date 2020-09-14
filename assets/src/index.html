@@ -21,13 +21,13 @@
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<ul class="navbar-nav">
 						<li class="nav-item active">
-							<a class="nav-link" href="#">О нас</a>
+							<a class="nav-link" href="#about">О нас</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Курсы</a>
+							<a class="nav-link" href="#course">Курсы</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Контакты</a>
+							<a class="nav-link" href="#contact">Контакты</a>
 						</li>
 					</ul>
 				</div>
@@ -46,22 +46,22 @@
 		</nav>
 	</header>
 	<main>
-		<section class="section__first" style="background-image: url('img/bg1.jpg');">
+		<section class="section__first section__first--general" style="background-image: url('img/bg1.jpg');">
 			<div class="container h-100">
-				<div class="d-flex h-100 flex-column justify-content-start">
+				<div class="h-100 first">
 					<div>
 						<div class="first__title">Теперь учат<br/> не только в школе</div>
 						<div class="first__subtitle">от 6 до 16 лет</div>
-						<a class="btns" href="#">Вперёд</a>
+						<a class="btns" href="#about">Вперёд</a>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="section section__about" style="background-image: url('img/about1.png')">
+		<section class="section section__about" style="" id="about">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-5">
+					<div class="col-lg-5">
 						<div class="about__title">Для кого наш проект?</div>
 						<div class="about__body">
 							<p>
@@ -70,19 +70,16 @@
 								интереса к учёбе так и нет? 
 							</p>
 							<p>
-								Наши курсы рассчитаны на то, чтобы
-								за короткое время, выявить интерес 
-								и увлечь учеников. 
+								Мы убеждены, что в каждом ребенке есть, то в чем он сильнее других. В чем у него талант, и задача учителя выявить эту способность и развивать именно ее.
 							</p>
 							<p>
-								Мы собрали
-								преподавателей, которые могут
-								влюбить в свой предмет или 
-								хобби с первого взгляда.
+								Мы собрали преподавателей, которые за короткий срок, помогут ребенку найти свой стиль, усилить концентрацию внимания, способность мыслить гибко, креативно и независимо. 
 							</p>
 						</div>
 					</div>
-					<div class="col-md-6"></div>
+					<div class="col-lg-6 m-0 p-0 hiddens">
+						<img class="w-100" src="img/about1.png" alt="">
+					</div>
 				</div>
 			</div>
 		</section>
@@ -109,27 +106,34 @@
 						<div class="how__item__number">3</div>
 						<div class="how__item__title">Вдохновляйтесь</div>
 						<div class="how__item__text">
-							Важный результат после курса это желание ребенка узнать больше
+							После курса у ребёнка появится желание заниматься и узнавать больше о теме предмета.
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="section section__quote" style="background-image: url('img/learn.png')">
+		<section class="section section__quote" style="">
 			<div class="container">
 				<div class="row">
+					<div class="col-md-6 hiddens p-0">
+						<img class="w-100" src="img/learn.png" alt="">
+					</div>
 					<div class="col-md-4 offset-md-7 quote__body">
-						Преподователь делится слайдами,  вовлекает  в  дискусии,  организовывает  шоу и  после такой подачи   физики  или   шахмат, интерес к предмету неизбежен
+						Преподаватели делятся слайдами, проводят тесты, вовлекают в дискуссии, организовывают шоу, после такой подачи материала по физике или живописи интерес к предмету неизбежен. 
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="section">
+		<section class="section" id="course">
 			<div class="container pb-5">
 				<div class="title title--big">Онлайн-курсы</div>
-				<div class="subtitle">Выберите свой курс:</div>
+				<div class="row">
+					<div class="col-md-6 subtitle pt-3">
+						Попробуйте несколько направлений и оставайтесь там, где ребенок сам захочет продолжить после первого урока
+					</div>
+				</div>
 			</div>
 
 			<!-- <div style="background: linear-gradient(to right, #d21e5e 0%, #d24476 80%, #fff 100%);">
@@ -152,8 +156,11 @@
 					<div class="row course">
 						<div class="col-md-9 course__item">
 							<div class="course__title" style="color: #337a3d;">Биология</div>
-							<div class="py-3">
-								<a class="course__link" href="">Курс по анатомии “Как устроен человек”</a>
+							<div class="pt-3">
+								<a class="course__link" href="courseBiology2.html">Курс по анатомии “Как устроен человек”</a>
+							</div>
+							<div class="pt-3">
+								<a class="course__link" href="courseBiology1.html">Ботаника</a>
 							</div>
 						</div>
 						<div class="col-md-3">
@@ -169,14 +176,18 @@
 						<div class="col-md-9 course__item">
 							<div class="course__title" style="color: #ff6901;">Искусство</div>
 							<div class="pt-3">
-								<a class="course__link" href="">Графический проект “Здесь кто-нибудь есть?”</a>
+								<a class="course__link" href="courseArt1.html">Графический проект “Здесь кто-нибудь есть?”</a>
 							</div>
 							<div class="pt-3">
-								<a class="course__link" href="">Плакатный проект “Внимание зомби-заболевание”</a>
+								<a class="course__link" href="courseArt2.html">Плакатный проект “Внимание зомби-заболевание”</a>
 							</div>
 							<div class="pt-3">
-								<a class="course__link" href="">Комиксный проект “Комикс: меньше слов, больше дела”</a>
+								<a class="course__link" href="courseArt4.html">Комиксный проект “Комикс: меньше слов, больше дела”</a>
 							</div>
+							<div class="pt-3">
+								<a class="course__link" href="courseArt4.html">Комиксный проект Концептуальный проект " Онлайн герой".</a>
+							</div>
+							 
 						</div>
 						<div class="col-md-3">
 							<img class="w-100" src="img/course/course2.png" alt="">
@@ -191,10 +202,10 @@
 						<div class="col-md-9 course__item">
 							<div class="course__title" style="color: #bb05fa;">Риторика</div>
 							<div class="pt-3">
-								<a class="course__link" href="">МУСС - мой успешный супер спитч (cамопрезентация и риторика)</a>
+								<a class="course__link" href="courseRitor1.html">МУСС - мой успешный супер спитч (cамопрезентация и риторика)</a>
 							</div>
 							<div class="pt-3">
-								<a class="course__link" href="">5 ступеней к вершине креативности</a>
+								<a class="course__link" href="courseRitor2.html">5 ступеней к вершине креативности</a>
 							</div>
 						</div>
 						<div class="col-md-3">
@@ -210,7 +221,7 @@
 						<div class="col-md-9 course__item">
 							<div class="course__title" style="color: #7060cd;">Физика</div>
 							<div class="pt-3">
-								<a class="course__link" href="">Занимательная механика</a>
+								<a class="course__link" href="coursePhisic1.html">Занимательная механика</a>
 							</div>
 						</div>
 						<div class="col-md-3">
@@ -226,10 +237,7 @@
 						<div class="col-md-9 course__item">
 							<div class="course__title" style="color: #016b9a;">Шахматы</div>
 							<div class="pt-3">
-								<a class="course__link" href="">Ход конем</a>
-							</div>
-							<div class="pt-3">
-								<a class="course__link" href="">5 ступеней к вершине креативности</a>
+								<a class="course__link" href="courseChess1.html">Ход конем</a>
 							</div>
 						</div>
 						<div class="col-md-3">
@@ -268,6 +276,8 @@
 				</div>
 			</div>
 		</section>
+
+		<div style="display: none;" id="aboutMe"></div>
 	</main>
 
 //= template/footer.html
